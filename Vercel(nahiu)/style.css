@@ -31,7 +31,7 @@ nav {
 
   padding: 15px 0;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  font-weight: bold;
+  font-weight: 400;
   font-size: 150%;
 }
 
@@ -62,7 +62,7 @@ nav ul li {
 }
 
 nav li a {
-  color: #000000;
+  color: #031645;
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 8px;
@@ -75,6 +75,7 @@ nav ul li a:hover {
 }
 
 h1 {
+  color: #031645;
   text-align: center;
   padding: 2%;
   margin: 2%;
@@ -222,13 +223,12 @@ h1 {
 }
 
 .redes-sociales a:hover {
-  color: #3498db;
   transform: translateY(-3px);
 }
 
 /* Opcional: Estilos para iconos específicos para darles su color de marca */
 .redes-sociales .fa-instagram:hover {
-  color: #e27713; /* Instagram */
+  color: #f741e7; /* Instagram */
 }
 
 .redes-sociales .fa-whatsapp:hover {
