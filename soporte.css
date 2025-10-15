@@ -1,0 +1,202 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  background: #f7f7f4;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;         /* centra verticalmente los elementos */
+  justify-content: flex-start; /* alinea todo a la izquierda */
+  gap: 20px;                   /* espacio entre el logo y el texto */
+  background-color: #41e4b9;
+  padding: 20px 40px;
+  text-align: left;
+}
+
+.imglogo {
+  width: 120px;
+  height: auto;
+}
+
+.titulo-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* texto alineado a la izquierda */
+}
+
+.titulo-header h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.subtitulo-header {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+
+
+/* Centrar la barra de navegación */
+.navbar {
+  justify-content: center !important;
+}
+
+/* Centrar los enlaces dentro */
+.navbar-nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 15%; /* espacio entre los enlaces */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 8px 15px; /* le da área de clic */
+  border-radius: 15px; /* mantiene la forma redondeada siempre */
+  transition: 0.5s; /* suaviza todo el cambio */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #41e4b9;
+  color: #031645;
+}
+
+/* ======== CONTENEDOR PRINCIPAL ======== */
+.contenedor-instrucciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1rem;
+  gap: 2rem;
+}
+
+/* ======== TARJETAS (INSTRUCCIONES) ======== */
+.instrucciones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 90%;
+  max-width: 1000px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.instrucciones:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ======== TEXTO DE LAS TARJETAS ======== */
+.texto-instrucciones {
+  flex: 1;
+}
+
+.texto-instrucciones h3 {
+  color: #0b3d91;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.texto-instrucciones ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.texto-instrucciones li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* ======== IMÁGENES ======== */
+.img-instrucciones {
+  flex: 0 0 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-instrucciones img {
+  width: 100%;
+  max-width: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+
+.mi-footer {
+  background-color: #41e4b9;
+  color: #555;
+  padding: 30px 20px;
+  margin-top: 40px;
+  box-shadow: 5px -5px 15px rgba(58, 199, 154, 0.619);
+  text-align: center;
+}
+
+.footer-contenido {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.mi-footer p {
+  font-size: 0.9em;
+  margin: 30px;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.redes-sociales a {
+  color: #ecf0f1;
+  font-size: 2.2em;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.redes-sociales a:hover {
+  transform: translateY(-3px);
+}
+
+/* Opcional: Estilos para iconos específicos para darles su color de marca */
+.redes-sociales .fa-instagram:hover {
+  color: #f741e7; /* Instagram */
+}
+
+.redes-sociales .fa-whatsapp:hover {
+  color: #25d366; /* WhatsApp */
+}
+
+.redes-sociales .fa-facebook:hover {
+  color: #1877f2; /* Facebook */
+}
+
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .instrucciones {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .img-instrucciones {
+    margin-top: 1.2rem;
+    flex: none;
+  }
+}

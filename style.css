@@ -1,0 +1,278 @@
+@font-face {
+  font-family: "butler_stencil";
+  src: url(/vercel/fonts/Butler_Webfont.ttf) format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  background: #f7f7f4;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;         /* centra verticalmente los elementos */
+  justify-content: flex-start; /* alinea todo a la izquierda */
+  gap: 20px;                   /* espacio entre el logo y el texto */
+  background-color: #41e4b9;
+  padding: 20px 40px;
+  text-align: left;
+}
+
+.imglogo {
+  width: 120px;
+  height: auto;
+}
+
+.titulo-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* texto alineado a la izquierda */
+}
+
+.titulo-header h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.subtitulo-header {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+
+
+/* Centrar la barra de navegación */
+.navbar {
+  justify-content: center !important;
+}
+
+/* Centrar los enlaces dentro */
+.navbar-nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 15%; /* espacio entre los enlaces */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 8px 15px; /* le da área de clic */
+  border-radius: 15px; /* mantiene la forma redondeada siempre */
+  transition: 0.5s; /* suaviza todo el cambio */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #41e4b9;
+  color: #031645;
+}
+
+
+.img {
+  margin-right: 50px;
+}
+
+h1 {
+  color: #031645;
+  text-align: center;
+  padding: 2%;
+  margin: 2%;
+}
+
+/* Estilos para el carrusel */
+
+.carousel-item img {
+  width: 100%;
+  height: 500px; /* Ajusta la altura según necesites */
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-fade .carousel-item {
+  transition: opacity 1s ease-in-out;
+}
+
+#carouselExampleFade {
+  max-width: 900px;
+  margin: 50px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.container {
+  background-color: hsl(241, 83%, 12%);
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-content: center;
+}
+.contenedor-tarjetas {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.tarjetas {
+  background-color: #41e4b9;
+  font-size: 20px;
+  text-align: start;
+  margin: 15px;
+  color: hsl(253, 56%, 12%);
+  width: 60%;
+  padding: 25px;
+  border-radius: 15px;
+  width: 400px;
+  height: auto;
+  box-shadow: 1px 1px 1px black;
+}
+.tarjetas h3 {
+  margin-bottom: 4vh;
+}
+
+.contenedor-integrantes {
+  margin: 20px;
+  display: flex;
+  flex-flow: row;
+  justify-content: center; /* Alinea en eje horizontal */
+  align-items: center; /* Alinea en eje vertical */
+  flex-direction: row; /* Dirección principal: fila (default) */
+  gap: 150px; /* Espacio entre los elementos */
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  padding: 100px;
+}
+
+.img-integrantes {
+  width: 150px; /* Ancho */
+  height: 150px; /* Alto igual al ancho → forma cuadrada */
+  border-radius: 50%; /* La hace circular */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  transition: all 0.3s ease;
+}
+
+.img-integrantes:hover {
+  transform: scale(1.5); /* Aumenta el tamaño */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Agrega sombra */
+  cursor: pointer; /* Cambia el cursor */
+  background-color: #41e4b9;
+}
+
+.texto-integrantes {
+  position: absolute;
+  bottom: 0; /* Aparece desde abajo */
+  background: rgba(0, 0, 0, 0.6); /* Fondo semitransparente */
+  color: black;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  opacity: 0; /* Invisible al inicio */
+  transition: opacity 0.3s ease;
+}
+
+.contenedor-integrantes:hover .texto {
+  opacity: 1; /* Muestra el texto */
+}
+
+.mi-footer {
+  background-color: #41e4b9;
+  color: #555;
+  padding: 30px 20px;
+  margin-top: 40px;
+  box-shadow: 5px -5px 15px rgba(58, 199, 154, 0.619);
+  text-align: center;
+}
+
+.footer-contenido {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.mi-footer p {
+  font-size: 0.9em;
+  margin: 30px;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.redes-sociales a {
+  color: #ecf0f1;
+  font-size: 2.2em;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.redes-sociales a:hover {
+  transform: translateY(-3px);
+}
+
+/* Opcional: Estilos para iconos específicos para darles su color de marca */
+.redes-sociales .fa-instagram:hover {
+  color: #f741e7; /* Instagram */
+}
+
+.redes-sociales .fa-whatsapp:hover {
+  color: #25d366; /* WhatsApp */
+}
+
+.redes-sociales .fa-facebook:hover {
+  color: #1877f2; /* Facebook */
+}
+
+.fa-brands {
+  color: #e72084;
+  font-size: 30px;
+  margin: 30x;
+  text-decoration: none;
+}
+
+.fa-solid {
+  color: #e72084;
+  font-size: 30px;
+  margin: 30px;
+  text-decoration: none;
+}
+
+/* Estilos responsivos movil*/
+@media (max-width: 768px) {
+  .contenedor-tarjetas {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .tarjetas {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+}

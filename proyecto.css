@@ -1,0 +1,213 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background: #f7f7f4;
+}
+
+/* ---------------- HEADER & NAV ---------------- */
+/* HEADER */
+header {
+  display: flex;
+  align-items: center;         /* centra verticalmente los elementos */
+  justify-content: flex-start; /* alinea todo a la izquierda */
+  gap: 20px;                   /* espacio entre el logo y el texto */
+  background-color: #41e4b9;
+  padding: 20px 40px;
+  text-align: left;
+}
+
+.imglogo {
+  width: 120px;
+  height: auto;
+}
+
+.titulo-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* texto alineado a la izquierda */
+}
+
+.titulo-header h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.subtitulo-header {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Centrar la barra de navegación */
+.navbar {
+  justify-content: center !important;
+}
+
+/* Centrar los enlaces dentro */
+.navbar-nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 15%; /* espacio entre los enlaces */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+  padding: 8px 15px; /* le da área de clic */
+  border-radius: 15px; /* mantiene la forma redondeada siempre */
+  transition: 0.5s; /* suaviza todo el cambio */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #41e4b9;
+  color: #031645;
+}
+
+/* ---------------- TITULOS ---------------- */
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0;
+    color: black;
+}
+
+
+
+/* Distribuir las imágenes en 2 columnas iguales */
+article {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* dos columnas */
+  gap: 40px; /* espacio entre las figuras */
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+  justify-items: center; /* centra las figuras horizontalmente */
+}
+
+/* Cada figura centrada */
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Todas las imágenes del mismo tamaño */
+.imgagenes {
+  width: 100%;
+  max-width: 400px; /* tamaño máximo uniforme */
+  height: 250px; /* alto fijo para todas */
+  object-fit: cover; /* recorta sin deformar */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto debajo de cada imagen */
+figcaption {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+
+
+.mi-footer {
+  background-color: #41e4b9;
+  color: #555;
+  padding: 30px 20px;
+  margin-top: 40px;
+  box-shadow: 5px -5px 15px rgba(58, 199, 154, 0.619);
+  text-align: center;
+}
+
+.footer-contenido {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.mi-footer p {
+   
+    font-size: 0.9em;
+    margin: 30px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    margin-top: 15px; 
+}
+
+.redes-sociales a {
+  color: #ecf0f1;
+  font-size: 2.2em;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+.redes-sociales a:hover {
+    transform: translateY(-3px); 
+}
+
+/* Opcional: Estilos para iconos específicos para darles su color de marca */
+.redes-sociales .fa-instagram:hover {
+    color: #f741e7; /* Instagram */
+}
+
+.redes-sociales .fa-whatsapp:hover {
+    color: #25D366; /* WhatsApp */
+}
+
+.redes-sociales .fa-facebook:hover {
+    color: #1877F2; /* Facebook */
+}
+
+
+/* ---------------- RESPONSIVE ---------------- */
+
+/* Tablets */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    article {
+        gap: 50px;
+        margin: 40px auto;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-neon {
+        font-size: 2rem;
+    }
+
+    figcaption {
+        font-size: 1rem;
+    }
+}
